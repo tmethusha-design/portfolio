@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thewli Methusha — Cybersecurity Student Portfolio</title>
+<meta name="description" content="Portfolio of Thewli Methusha, a first-year Cybersecurity student learning network security, ethical hacking, and Linux through university projects and CTFs." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-box">
+    <div class="loader-line">$ initializing secure_session...</div>
+    <div class="loader-line">$ mounting /portfolio ...</div>
+    <div class="loader-line">$ loading modules: hero, about, skills, projects...</div>
+    <div class="loader-line">$ access granted.</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="bg-grid"></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><span class="caret">&gt;</span> thewli..<span class="blink">_</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#education">education</a>
+      <a href="#roadmap">roadmap</a>
+      <a href="#achievements">achievements</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="mycv.jpeg" class="btn btn-ghost" download="Thewli_CV.jpeg">Download CV</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <canvas id="matrixCanvas"></canvas>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">// undergraduate student· Gampaha, Sri Lanka</p>
+        <h1 class="hero-name">Hi, I'm <span class="accent">Thewli Methusha</span></h1>
+        <p class="hero-role"><span id="typedRole"></span><span class="cursor"></span></p>
+        <p class="hero-text">
+          I'm passionate about cybersecurity and currently learning network security, ethical hacking,
+          Linux, and digital defense. My goal is to build practical skills through labs, CTF challenges,
+          and university projects — one step at a time.
+        </p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">About Me</a>
+          <a href="#projects" class="btn btn-ghost">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge"><b data-count="1" id="badgeProjects">0</b><span>Projects</span></div>
+          <div class="hero-badge"><b data-count="1" id="badgeCtf">0</b><span>CTF Rooms</span></div>
+          <div class="hero-badge"><b data-count="3" id="badgeCerts">0</b><span>Certificates</span></div>
+          <div class="hero-badge"><b data-count="9" id="badgeTech">0</b><span>Technologies</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot r"></span>
+            <span class="terminal-dot y"></span>
+            <span class="terminal-dot g"></span>
+            <span class="terminal-title">Thewli@-student: ~</span>
+          </div>
+          <div class="terminal-body">
+            <div id="terminalTyped"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 — About</p>
+        <h2>Getting to know the person behind the terminal</h2>
+        <p>A quick look at who I am, where I'm studying, and what I'm working toward.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="avatar-frame">
+            <div class="avatar-scan"></div>
+            <img src="p.cv.jpg" alt="Profile photo" />
+          </div>
+          <ul class="info-list">
+            <li><span>Location</span><span>Gampaha, Sri Lanka</span></li>
+            <li><span>Degree</span><span>BSc (Hons) in Cybersecurity</span></li>
+            <li><span>Year</span><span>1st Year, Semester 2</span></li>
+            <li><span>Focus</span><span>Network Security &amp; Ethical Hacking</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="about-bio reveal">
+            <p>
+              I'm a first-year Cybersecurity student who got hooked on this field after setting up my
+              first home lab and realizing how much there is to learn about how systems break —
+              and how to defend them.
+            </p>
+            <p>
+              Right now I'm building a foundation in <strong>Linux, networking, and programming</strong>,
+              while getting hands-on through beginner CTF rooms and small personal projects. I'm not
+              claiming to be an expert — I'm documenting a learning journey, one lab and one line of
+              code at a time.
+            </p>
+            <p>
+              My long-term goal is to become a <strong>Security Analyst</strong>, with a particular
+              interest in network defense and digital forensics.
+            </p>
+          </div>
+
+          <div class="stat-row reveal reveal-delay-1">
+            <div class="stat-card glass"><b data-count="1" data-suffix="">0</b><span>Projects</span></div>
+            <div class="stat-card glass"><b data-count="1" data-suffix="">0</b><span>CTF Challenges</span></div>
+            <div class="stat-card glass"><b data-count="3" data-suffix="">0</b><span>Certificates</span></div>
+            <div class="stat-card glass"><b data-count="9" data-suffix="">0</b><span>Tech Learned</span></div>
+          </div>
+
+          <div class="timeline reveal reveal-delay-2">
+            <div class="tl-item">
+              <span class="tl-date">Now 2025</span>
+              <h4>Started SLTC University</h4>
+              <p>Enrolled in BSc (Hons) in Cybersecurity.</p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-date">Dec 2025</span>
+              <h4>Learning to Code</h4>
+              <p>Began with Python and Java fundamentals through coursework and practice.</p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-date">Dec 2025</span>
+              <h4>Networking Fundamentals</h4>
+              <p>Studied the OSI model, TCP/IP, and basic routing concepts.</p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-date">May 2026</span>
+              <h4>Linux &amp; Command Line</h4>
+              <p>Set up Kali Linux in a VM and started daily terminal practice.</p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-date">June 2026</span>
+              <h4>First Steps into Security</h4>
+              <p>Started TryHackMe's Pre Security path and first CTF rooms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">02 — Skills</p>
+        <h2>What I'm building right now</h2>
+        <p>Beginner-level, growing steadily — here's an honest snapshot of where I'm at.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card glass reveal">
+          <div class="skill-card-head">
+            <span class="ic">&lt;/&gt;</span>
+            <h4>Programming</h4>
+          </div>
+          <div class="skill-item"><div class="skill-row"><span>Python</span><span>65%</span></div><div class="skill-bar"><span data-level="65"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>C</span><span>50%</span></div><div class="skill-bar"><span data-level="50"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>HTML / CSS</span><span>70%</span></div><div class="skill-bar"><span data-level="70"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>JavaScript (Basic)</span><span>35%</span></div><div class="skill-bar"><span data-level="35"></span></div></div>
+        </div>
+
+        <div class="skill-card glass reveal reveal-delay-1">
+          <div class="skill-card-head">
+            <span class="ic">&#128274;</span>
+            <h4>Cybersecurity</h4>
+          </div>
+          <div class="skill-item"><div class="skill-row"><span>Cybersecurity Fundamentals</span><span>55%</span></div><div class="skill-bar"><span data-level="55"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>Network Security</span><span>45%</span></div><div class="skill-bar"><span data-level="45"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>Ethical Hacking Basics</span><span>40%</span></div><div class="skill-bar"><span data-level="40"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>Password &amp; Digital Safety</span><span>60%</span></div><div class="skill-bar"><span data-level="60"></span></div></div>
+        </div>
+
+        <div class="skill-card glass reveal reveal-delay-2">
+          <div class="skill-card-head">
+            <span class="ic">&#127760;</span>
+            <h4>Networking</h4>
+          </div>
+          <div class="skill-item"><div class="skill-row"><span>OSI Model</span><span>60%</span></div><div class="skill-bar"><span data-level="60"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>TCP/IP</span><span>55%</span></div><div class="skill-bar"><span data-level="55"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>DNS &amp; HTTP</span><span>50%</span></div><div class="skill-bar"><span data-level="50"></span></div></div>
+          <div class="skill-item"><div class="skill-row"><span>Basic Routing</span><span>40%</span></div><div class="skill-bar"><span data-level="40"></span></div></div>
+        </div>
+
+        <div class="skill-card glass reveal reveal-delay-3">
+          <div class="skill-card-head">
+            <span class="ic">&#9881;</span>
+            <h4>Tools</h4>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">VirtualBox</span>
+            <span class="chip">Kali Linux</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 — Projects</p>
+        <h2>Things I've built while learning</h2>
+        <p>Small, practical projects — each one taught me something new.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card glass reveal">
+          <div class="project-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 4v5"/></svg></div>
+          <div class="project-body">
+            <h4>Tkinter Project</h4>
+            <p>This project — A desktop application for managing student records with an easy-to-use graphical interface. </p>
+            <div class="project-tags"><span>Pyton</span></div>
+            <div class="project-links">
+              <a href="https://github.com/tmethusha-design/TKinter-Project-01" class="primary" target="_blank">GitHub</a>
+              
+            </div>
+          </div>
+        </div>
+
+        
+
+        
+
+       
+
+       
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION & CERTIFICATIONS ============ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 — Education &amp; Certifications</p>
+        <h2>Formal learning, so far</h2>
+      </div>
+
+      <div class="edu-cert-grid">
+        <div class="edu-card glass reveal">
+          <p class="degree">Bachelor of Scirnce in Cybersecurity</p>
+          <p class="uni">SLTC Research University</p>
+          <p class="meta">Expected Graduation — 2029</p>
+          <ul class="course-list">
+            <li>Programming Fundamentals</li>
+            <li>Computer Systems</li>
+            <li>Networking Basics</li>
+            <li>Web Development</li>
+          </ul>
+        </div>
+
+        
+          <div class="cert-card glass">
+            <span class="ic">&#127942;</span>
+            <div>
+              <h5>Networking Basics</h5>
+              <span>Coursera / Google</span>
+              <span class="status done">Completed</span>
+            </div>
+          </div>
+          <div class="cert-card glass">
+            <span class="ic">&#127942;</span>
+            <div>
+              <h5>Pre Security Path</h5>
+              <span>TryHackMe</span>
+              <span class="status done">In Progress</span>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEARNING ROADMAP ============ -->
+  <section id="roadmap">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">05 — Learning Journey</p>
+        <h2>My current progress roadmap</h2>
+        <p>An honest map of what's done, what's in progress, and what's next.</p>
+      </div>
+
+      <div class="roadmap reveal">
+        <div class="rm-item done glass"><span class="rm-icon">&#10003;</span><div><h4>HTML &amp; CSS</h4><span>Completed</span></div></div>
+        <div class="rm-item done glass"><span class="rm-icon">&#10003;</span><div><h4>Python Basics</h4><span>Completed</span></div></div>
+        <div class="rm-item done glass"><span class="rm-icon">&#10003;</span><div><h4>Linux Basics</h4><span>Completed</span></div></div>
+        <div class="rm-item done glass"><span class="rm-icon">&#10003;</span><div><h4>Git &amp; GitHub</h4><span>Completed</span></div></div>
+        <div class="rm-item done glass"><span class="rm-icon">&#10003;</span><div><h4>Networking Fundamentals</h4><span>Completed</span></div></div>
+        <div class="rm-item progress glass"><span class="rm-icon">&#8635;</span><div><h4>Ethical Hacking</h4><span>In progress</span></div></div>
+        <div class="rm-item progress glass"><span class="rm-icon">&#8635;</span><div><h4>Web Security</h4><span>In progress</span></div></div>
+        <div class="rm-item progress glass"><span class="rm-icon">&#8635;</span><div><h4>Capture The Flag (CTF)</h4><span>In progress</span></div></div>
+        <div class="rm-item future glass"><span class="rm-icon">&#128274;</span><div><h4>Malware Analysis</h4><span>Future goal</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">06 — Achievements</p>
+        <h2>Milestones along the way</h2>
+      </div>
+
+      <div class="ach-grid">
+        <div class="ach-card glass reveal">
+          <span class="ic">&#127891;</span>
+          <h4>Dean's List — Semester 1</h4>
+          <p>Recognized for academic performance in my first semester of study.</p>
+        </div>
+        
+        <div class="ach-card glass reveal reveal-delay-2">
+          <span class="ic">&#128737;</span>
+          <h4>First CTF Participation</h4>
+          <p>Completed my first Capture The Flag event, solving beginner web and crypto challenges.</p>
+        </div>
+        
+        <div class="ach-card glass reveal reveal-delay-1">
+          <span class="ic">&#128196;</span>
+          <h4>Online Course Completions</h4>
+          <p>Finished multiple beginner-level cybersecurity and networking courses online.</p>
+        </div>
+        <div class="ach-card glass reveal reveal-delay-2">
+          <span class="ic">&#127919;</span>
+          <h4>Personal Learning Streak</h4>
+          <p>Maintained a consistent daily practice habit across Linux, Python, and CTF rooms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">07 — Contact</p>
+        <h2>Let's connect</h2>
+        <p>Open to internships, collaborations, and anyone who wants to talk cybersecurity.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Reach out</p>
+          <p>I usually reply within a day or two — feel free to message me on any of these.</p>
+          <div class="contact-list">
+            <a href="mailto:thewlimethusha12@gmail.com" class="glass">
+              <span class="ic">&#9993;</span>
+              <div><b>Email</b><span>thewlimethusha12@gmail.com</span></div>
+            </a>
+            <a href="#" class="glass">
+              <span class="ic">&#128187;</span>
+              <div><b>GitHub</b><span>https://github.com/tmethusha-design</span></div>
+            </a>
+            <a href="#" class="glass">
+              <span class="ic">in</span>
+              <div><b>LinkedIn</b><span>https://www.linkedin.com/in/thewli-methusha-25a4a136a</span></div>
+            </a>
+            <a href="#" class="glass">
+              <span class="ic">&#128205;</span>
+              <div><b>Location</b><span>Gampaha, Sri Lanka</span></div>
+            </a>
+          </div>
+        </div>
+
+        <form class="form-card glass reveal reveal-delay-1" id="contactForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="What's this about?" required>
+          </div>
+          <div class="field">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="caret">&gt;</span> thewli..<span class="blink">_</span></a>
+        <p>First-year Cybersecurity student sharing my learning journey — labs, CTFs, and projects, one step at a time.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub">GH</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="thewlimethusha12@gmail.com" aria-label="Email">@</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Thewli Methusha. All rights reserved.</span>
+      <span class="footer-tagline">"Securing Tomorrow, One Step at a Time."</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+<script src="script.js"></script>
+</body>
+</html>
